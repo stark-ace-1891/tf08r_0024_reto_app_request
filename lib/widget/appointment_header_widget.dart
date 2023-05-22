@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-class CardHeaderWidget extends StatelessWidget {
-  const CardHeaderWidget({super.key});
+class AppointmentHeaderWidget extends StatelessWidget {
+  const AppointmentHeaderWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         bottom: 10,
       ),
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           vertical: 15,
           horizontal: 23,
         ),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xff256FFF),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(32),
@@ -46,7 +44,7 @@ class CardHeaderWidget extends StatelessWidget {
                   Icons.access_time_filled,
                   color: Colors.white.withOpacity(0.8),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 5,
                 ),
                 Text(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tf08r_0024_reto_app_request/widget/card_widget.dart';
+import 'package:tf08r_0024_reto_app_request/widget/appointment_widget.dart';
 import 'package:tf08r_0024_reto_app_request/widget/header_widget.dart';
 
-import '../widget/header_title_widget.dart';
-
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,19 +19,19 @@ class HomePage extends StatelessWidget {
             ),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xffF3F6FF),
+                color: const Color(0xffF3F6FF),
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 30,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     HeaderWidget(),
-                    CardWidget(),
+                    AppointmentWidget(),
                   ],
                 ),
               ),
