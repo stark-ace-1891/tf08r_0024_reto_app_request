@@ -67,17 +67,60 @@ class HomePage extends StatelessWidget {
                       width: double.infinity,
                       height: 250,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(32),
                       ),
                       child: Column(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text("Appointment Request"),
-                              Icon(Icons.more_vert_outlined),
-                            ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 15,
+                              horizontal: 23,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.blue,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(32),
+                                topRight: Radius.circular(32),
+                              ),
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      "Appointment Request",
+                                      style: TextStyle(
+                                        color: Colors.white.withOpacity(0.60),
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.more_vert_outlined,
+                                      color: Colors.white.withOpacity(0.60),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.access_time_filled,
+                                      color: Colors.white.withOpacity(0.8),
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text(
+                                      "12 Jan 2020, 8am - 10am",
+                                      style: TextStyle(
+                                          color: Colors.white.withOpacity(0.8),
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
