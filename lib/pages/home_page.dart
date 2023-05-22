@@ -18,12 +18,13 @@ class HomePage extends StatelessWidget {
                 color: Colors.white.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
+              child: const Padding(
+                padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 30,
                 ),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,6 +38,30 @@ class HomePage extends StatelessWidget {
                           color: Colors.black45,
                         ),
                       ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Text(
+                      "Welcome back!",
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.black45,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Dr. Peterson",
+                      style: TextStyle(
+                        fontSize: 28,
+                        color: Colors.black87,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30,
                     ),
                   ],
                 ),
