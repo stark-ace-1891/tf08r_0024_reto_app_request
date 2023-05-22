@@ -16,6 +16,13 @@ class AppointmentWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(32),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.06),
+            blurRadius: 12,
+            offset: Offset(4, 4),
+          ),
+        ],
       ),
       child: Column(
         children: const [

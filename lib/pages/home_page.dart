@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tf08r_0024_reto_app_request/widget/appointment_next_widget.dart';
 import 'package:tf08r_0024_reto_app_request/widget/appointment_widget.dart';
 import 'package:tf08r_0024_reto_app_request/widget/header_widget.dart';
 
@@ -32,6 +33,7 @@ class HomePage extends StatelessWidget {
                   children: const [
                     HeaderWidget(),
                     AppointmentWidget(),
+                    AppointmentNextWidget(),
                   ],
                 ),
               ),

@@ -12,7 +12,7 @@ class HeaderTitleWidget extends StatelessWidget {
       child: Column(
         children: const [
           Text(
-            "Welcome back!",
+            "Welcome Back!",
             style: TextStyle(
               fontSize: 20,
               color: Colors.black26,
