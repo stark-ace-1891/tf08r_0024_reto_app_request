@@ -13,6 +13,7 @@ class HeaderIconWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
           Icon(
+            // Icons.dehaze,
             Icons.dehaze,
             color: Colors.black45,
           ),

@@ -7,7 +7,7 @@ class HeaderTitleWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(
-        bottom: 30,
+        bottom: 20,
       ),
       child: Column(
         children: const [
@@ -15,7 +15,7 @@ class HeaderTitleWidget extends StatelessWidget {
             "Welcome Back!",
             style: TextStyle(
               fontSize: 20,
-              color: Colors.black26,
+              color: Color(0xff8E9AC4),
               fontWeight: FontWeight.bold,
             ),
           ),
