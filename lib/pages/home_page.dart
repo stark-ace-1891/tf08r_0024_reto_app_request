@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.white.withOpacity(0.5),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 20,
                   vertical: 30,
@@ -62,6 +62,25 @@ class HomePage extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 30,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 250,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(32),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text("Appointment Request"),
+                              Icon(Icons.more_vert_outlined),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
