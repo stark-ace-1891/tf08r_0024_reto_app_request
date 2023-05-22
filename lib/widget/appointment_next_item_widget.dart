@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AppointmentNextItemWidget extends StatelessWidget {
-  const AppointmentNextItemWidget({super.key});
+  final String name;
+  final String image;
+  final String date;
+
+  const AppointmentNextItemWidget(
+      {required this.name, required this.image, required this.date});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +21,7 @@ class AppointmentNextItemWidget extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withOpacity(0.06),
             blurRadius: 12,
-            offset:const Offset(4, 4),
+            offset: const Offset(4, 4),
           ),
         ],
       ),
@@ -26,19 +31,19 @@ class AppointmentNextItemWidget extends StatelessWidget {
           child: SizedBox.fromSize(
             size: const Size.fromRadius(30), // Image radius
             child: Image.network(
-              'https://images.pexels.com/photos/874158/pexels-photo-874158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+              image,
               fit: BoxFit.cover,
             ),
           ),
         ),
-        title: const Text(
-          'Dorathy Nelson',
+        title: Text(
+          name,
           style: TextStyle(
             fontWeight: FontWeight.w600,
           ),
         ),
-        subtitle: const Text(
-          '09 Jan 2020, 8am - 10am',
+        subtitle: Text(
+          date,
           style: TextStyle(
             fontWeight: FontWeight.w600,
           ),

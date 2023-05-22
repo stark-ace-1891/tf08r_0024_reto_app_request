@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tf08r_0024_reto_app_request/data/fake_data.dart';
 import 'package:tf08r_0024_reto_app_request/widget/appointment_next_item_widget.dart';
 
 class AppointmentNextWidget extends StatelessWidget {
@@ -6,35 +7,40 @@ class AppointmentNextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        physics: const BouncingScrollPhysics(),
-        child: Container(
-          padding: const EdgeInsets.only(
-            top: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Next appointments",
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black.withOpacity(0.45)
+    FakeData data = FakeData();
+
+    return FutureBuilder(
+      future: data.getPlaces(),
+      builder: (BuildContext context, AsyncSnapshot snap) {
+        if (snap.hasData) {
+          print(snap.data);
+          return Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              physics: const BouncingScrollPhysics(),
+              child: Container(
+                padding: const EdgeInsets.only(
+                  top: 20,
+                ),
+                child: Column(
+                  children: snap.data
+                      .map((element) {
+                        return AppointmentNextItemWidget(
+                          name: element["name"],
+                          image: element["image"],
+                          date: element["date"],
+                        );
+                      })
+                      .whereType<Widget>()
+                      .toList(),
                 ),
               ),
-              const SizedBox(
-                height: 15,
-              ),
-              const AppointmentNextItemWidget(),
-              const AppointmentNextItemWidget(),
-              const AppointmentNextItemWidget(),
-              const AppointmentNextItemWidget(),
-            ],
-          ),
-        ),
-      ),
+            ),
+          );
+        } else {
+          return CircularProgressIndicator();
+        }
+      },
     );
   }
 }
